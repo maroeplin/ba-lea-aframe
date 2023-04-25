@@ -1,0 +1,733 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
+    
+  </head>
+  <body>
+   
+      <a-scene fog="type: linear; color: #CCD; far: 180; near: 0"> 
+     
+      <a-scene> 
+
+      <!-- ASSET MANAGER -->
+      <a-assets>
+        <img id="sky" src="assets/sky.png">
+        <img id="s1" src="assets/st-01.png">
+        <img id="s2" src="assets/st-02.png">
+        <img id="s3" src="assets/st-03.png">
+        <img id="s4" src="assets/st-04.png">
+        <img id="s5" src="assets/st-05.png">
+        <img id="s6" src="assets/st-06.png">
+        <img id="s7" src="assets/st-07.png">
+        <img id="s8" src="assets/st-08.png">
+        <img id="s9" src="assets/st-09.png">
+        <img id="s10" src="assets/st-10.png">
+        <img id="s11" src="assets/st-11.png">
+        <img id="s12" src="assets/st-12.png">
+        <img id="s13" src="assets/st-13.png">
+        <img id="s14" src="assets/st-14.png">
+        <img id="a10.1" src="assets/artikel10-01.png">
+        <img id="a10.2" src="assets/artikel10-02.png">
+        <img id="a10.3" src="assets/artikel10-03.png">
+        <img id="a10.4" src="assets/artikel10-04.png">
+        <img id="a10.5" src="assets/artikel10-05.png">
+        <img id="a10.6" src="assets/artikel10-06.png">
+        <img id="a10.7" src="assets/artikel10-07.png">
+        <img id="a10.8" src="assets/artikel10-08.png">
+        <img id="a10.9" src="assets/artikel10-09.png">
+        <img id="a10.1b" src="assets/artikel10b-01.png">
+        <img id="a10.2b" src="assets/artikel10b-02.png">
+        <img id="a10.3b" src="assets/artikel10b-03.png">
+        <img id="a10.4b" src="assets/artikel10b-04.png">
+        <img id="a10.5b" src="assets/artikel10b-05.png">
+        <img id="a10.6b" src="assets/artikel10b-06.png">
+        <img id="a10.7b" src="assets/artikel10b-07.png">
+        <img id="a10.8b" src="assets/artikel10b-08.png">
+        <img id="a10.9b" src="assets/artikel10b-09.png">
+        <img id="a5.1" src="assets/a5-01.png">
+        <img id="a5.2" src="assets/a5-02.png">
+        <img id="a5.3" src="assets/a5-03.png">
+        <img id="a5.4" src="assets/a5-04.png">
+        <img id="a5.5" src="assets/a5-05.png">
+        <img id="a5.6" src="assets/a5-06.png">
+        <img id="a5.7" src="assets/a5-07.png">
+        <img id="a5.8" src="assets/a5-08.png">
+        <img id="a8.1" src="assets/a8_1.png">
+        <img id="a8.2" src="assets/a8_2.png">
+        <img id="a8.3" src="assets/a8_3.png">
+        <img id="a8.4" src="assets/a8_4.png">
+        <img id="a8.5" src="assets/a8_5.png">
+        <img id="a8.6" src="assets/a8_6.png">
+        <img id="a8.7" src="assets/a8_7.png">
+        <img id="a8.8" src="assets/a8_8.png">
+        <img id="a8.9" src="assets/a8_9.png">
+        <img id="a8.10" src="assets/a8_10.png">
+        <img id="a8.11" src="assets/a8_11.png">
+        <img id="a8.12" src="assets/a8_12.png">
+        <img id="a8.13" src="assets/a8_13.png">
+        <img id="a8.14" src="assets/a8_14.png">
+        <img id="a8.15" src="assets/a8_15.png">
+        <img id="a8.16" src="assets/a8_16.png">
+        <img id="a8.17" src="assets/a8_17.png">
+        <img id="a8.18" src="assets/a8_18.png">
+        <img id="a8.19" src="assets/a8_19.png">
+        <img id="a8.20" src="assets/a8_20.png">
+        <img id="a13.0.1b" src="assets/a13b_0.1b.png">
+        <img id="a13.0.2b" src="assets/a13b_0.2b.png">
+        <img id="a13.1b" src="assets/a13b_1b.png">
+        <img id="a13.2b" src="assets/a13b_2b.png">
+        <img id="a13.2.2b" src="assets/a13b_2.2b.png">
+        <img id="a13.3b" src="assets/a13b_3b.png">
+        <img id="a13.3.1b" src="assets/a13b_3.1b.png">
+        <img id="a13.3.2b" src="assets/a13b_3.2b.png">
+        <img id="a13.4b" src="assets/a13b_4b.png">
+        <img id="a13.5.1b" src="assets/a13b_5.1b.png">
+        <img id="a13.5.2b" src="assets/a13b_5.2b.png">
+        <img id="a13.6b" src="assets/a13b_6b.png">
+        <img id="a13.7.1b" src="assets/a13b_7.1b.png">
+        <img id="a13.7.2b" src="assets/a13b_7.2b.png">
+        <img id="a13.8b" src="assets/a13b_8b.png">
+        <img id="a13.0.1" src="assets/a13_0.1.png">
+        <img id="a13.0.2" src="assets/a13_0.2.png">
+        <img id="a13.1" src="assets/a13_1.png">
+        <img id="a13.2" src="assets/a13_2.png">
+        <img id="a13.2.2" src="assets/a13_2.2.png">
+        <img id="a13.3" src="assets/a13_3.png">
+        <img id="a13.3.1" src="assets/a13_3.1.png">
+        <img id="a13.3.2" src="assets/a13_3.2.png">
+        <img id="a13.4" src="assets/a13_4.png">
+        <img id="a13.5.1" src="assets/a13_5.1.png">
+        <img id="a13.5.2" src="assets/a13_5.2.png">
+        <img id="a13.6" src="assets/a13_6.png">
+        <img id="a13.7.1" src="assets/a13_7.1.png">
+        <img id="a13.7.2" src="assets/a13_7.2.png">
+        <img id="a13.8" src="assets/a13_8.png">
+
+      </a-assets>
+
+      <!-- ASSET MANAGER ENDE-->
+    
+
+      <!--KAMERASTARTPUNKT-->
+      
+      <a-entity id="startpunkt" 
+      position="-1.9732 1.6 107.83588" 
+      rotation="0 0 0">
+      <a-camera></a-camera>
+      </a-entity>
+
+      <!--KAMERASTARTPUNKT ENDE-->
+
+    
+       <!-- 360GRAD BG-->
+
+       <a-sky 
+       scale="1 1 1" 
+       shadow="receive: true; cast: true" 
+       color="#b5c2e8"
+       position="0 0 0">
+     </a-sky>
+
+       <!--360GRAD BG ENDE-->
+
+      <!--LICHT-->
+
+  
+      <a-entity id="licht_di" visible="true" rotation="0 0 0" 
+            position="100 100 -3.37208" 
+            light="type: directional; castShadow:true;; shadowMapWidth: 512; intensity: 0.2; decay: 1; distance: 0; shadowCameraBottom: -5; shadowMapHeight: 513.19; shadowCameraFov: 90; shadowCameraLeft: -5; shadowCameraNear: 0.52; shadowCameraVisible: false">
+        </a-entity>
+      
+      <a-entity id="licht_po_1" rotation="0 109.43551182778236 0" 
+            light="type: point; castShadow: true;; shadowMapWidth: 512.77; shadowMapHeight: 505.61; intensity: 0.48; color: #FFF; shadowRadius: 2.51; angle: 50" 
+            position="59.89613 150.32965 230.78665">
+        </a-entity>
+
+      <a-entity id="licht_po_2" rotation="0 0 0" 
+            light="type: point; castShadow:true;; shadowMapWidth: 512; intensity: 0.34; decay: 1" 
+            position="63.54319 45 -178.18158">
+      </a-entity>
+
+      <a-entity id="licht_po_3" 
+            light="type: point; castShadow:true;; shadowMapWidth: 512; intensity: 0.09" 
+            position="-377.59189 98.65264 -69.65319">
+      </a-entity>
+
+      <a-entity id="licht_amb"
+      light="type: ambient; color: #CCC; intensity: 0.40"></a-entity>
+
+      <!--LICHT ENDE-->
+
+
+
+     <!-------- TREPPE Artikel 2 ANFANG ------>
+
+
+      <a-plane id="stufe2plane" 
+            geometry="width: 20; height: 10" 
+            position="-1 0 4" 
+            src="#s3" 
+            rotation="-90 0 0">
+      </a-plane>    
+
+      
+
+            <!-- Artikel 2 Line-Tür ANFANG -->
+
+            <a-box id="a2_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 10; height: 0.03;" position="-11 4.9 1" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 10; height: 0.03;" position="-11 4.9 7" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line3" rotation="0 90 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-11 -0.1 4" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line4" rotation="0 90 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-11 9.9 4" color="#000000"> </a-box></a-box>
+      
+            <a-box id="a2_b2_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 10; height: 0.03;" position="-21 4.9 1" color="#000000"> </a-box></a-box>
+            <a-box id="a2_b2_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 10; height: 0.03;" position="-21 4.9 7" color="#000000"> </a-box></a-box>
+            <!-- <a-box id="a2_b4_line3" rotation="0 90 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-21 9.9 4" color="#000000"> </a-box></a-box> -->
+      
+            <a-box id="a2_line5" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="-21 -0.1 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="-21 9.9 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line7" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 -0.1 1" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line8" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 -0.1 7" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 9.9 1" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 9.9 7" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line11" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="19 -0.1 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_line12" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="19 9.9 7.5" color="#000000"> </a-box></a-box>
+            
+      
+            <!-- Artikel 2 Line-Tür ENDE -->
+      
+            <!-- Artikel 2 Linien-Haus ANFANG-->
+      
+            <a-box id="a2_g1_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 35; height: 0.03;" position="-21 -2.5 30" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 35; height: 0.03;" position="-21 -2.5 -15" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 35; height: 0.03;" position="19 -2.5 30" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 35; height: 0.03;" position="19 -2.5 -15" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line5" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="19 -20 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="19 15 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line7" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="-21 15 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 45; height: 0.03;" position="-21 -20 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 -20 30" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 -20 -15" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line11" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 15 30" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g1_line12" rotation="0 0 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-1 15 -15" color="#000000"> </a-box></a-box>
+      
+            <a-box id="a2_g2_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-11 -2.5 27.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-11 -2.5 -12.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 30; height: 0.03;" position="24 -2.5 27.4685" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 30; height: 0.03;" position="24 -2.5 -12.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line5" rotation="0 90 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="24 -17.5 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="24 12.5 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line7" rotation="0 90 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-11 12.5 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 40; height: 0.03;" position="-11 -17.5 7.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 35; height: 0.03;" position="6.5 -17.5 27.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 35; height: 0.03;" position="6.5 -17.5 -12.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line11" rotation="0 0 0" geometry="depth: 0.03;; width: 35; height: 0.03;" position="6.5 12.5 27.5" color="#000000"> </a-box></a-box>
+            <a-box id="a2_g2_line12" rotation="0 0 0" geometry="depth: 0.03;; width: 35; height: 0.03;" position="6.5 12.5 -12.5" color="#000000"> </a-box></a-box>
+      
+      
+            <!-- Artikel 2 Linien-Haus ENDE-->
+
+            <!--TEXT Artikel 2 ANFANG-->
+
+      
+
+            <a-entity id="artikel2c" 
+                  rotation="0 0 0" 
+                  scale="13 13 13" 
+                  position="14.24986 -5.30979 10.97361"
+                  text="value: c) die Finanzmittelfluesse in Einklang gebracht werden mit einem Weg hin zu einer hinsichtlich der Treibhausgase emissionsarmen und gegenueber Klima- aenderungen widerstandsfaehigen Entwicklung.; 
+                  color:#000000; wrapCount: 38; lineHeight: 46; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+            </a-entity>
+
+           
+
+      <!--TEXT Artikel 2 ENDE-->
+      
+      <!-- TREPPE 2 ENDE-->
+
+
+
+       <!---------- Treppe Artikel 5 ANFANG --------->
+      
+
+
+      <a-plane id="stufe5plane4" 
+            geometry="width: 10; height: 10" 
+            position="10 -1.05 -111"
+            src="#a5.2" 
+            rotation="9 -46 -6.000000000000001">
+      </a-plane>  
+
+                                                                                                                  
+      <a-box id="a5_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="3 0 -105" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="3 0 -125" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="23 0 -125" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="23 0 -105" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line5" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="13 -10 -125" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="23 -10 -115" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line7" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="13 -10 -105" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="3 -10 -115" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="13 10 -125" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="13 10 -105" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line11" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="3 10 -115" color="#000000"> </a-box></a-box>
+      <a-box id="a5_line12" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="23 10 -115" color="#000000"> </a-box></a-box>
+
+      
+      <a-box id="a5_q_line5" rotation="6 46 9" geometry="depth: 0.03;; width: 7; height: 0.03;" position="10.06737 -12.31682 -116.99971" color="#000000"> </a-box></a-box>
+      <a-box id="a5_q_line6" rotation="9 -46 -6" geometry="depth: 0.03;; width: 7; height: 0.03;" position="14.96094 -12.1116 -116.88005" color="#000000"> </a-box></a-box>
+      <a-box id="a5_q_line7" rotation="6 46 9" geometry="depth: 0.03;; width: 7; height: 0.03;" position="15 -13.03418 -112" color="#000000"> </a-box></a-box>
+      <a-box id="a5_q_line8" rotation="9 -46 -6" geometry="depth: 0.03;; width: 7; height: 0.03;" position="10.11129 -13.2139 -112.07936" color="#000000"> </a-box></a-box>
+
+      <!--TEXT Artikel 5 ANFANG-->
+
+      <a-entity id="artikel5.1" 
+        rotation="0 -11.021989104931647 0" 
+        scale="15 15 15" 
+        position="28.14552 0.31333 -110.71278"
+        text="value: (1) Die Vertragsparteien sollen Massnahmen zur Erhaltung und gegebenenfalls Verbesserung von Senken und Speichern von Treibhausgasen, darunter Waelder, nach Artikel 4 Absatz 1 Buchstabe d des Rahmenuebereinkommens ergreifen.; 
+        color:#000000; wrapCount: 50; lineHeight: 46; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+    </a-entity>
+
+
+      <!--TEXT Artikel 5 ENDE-->
+
+      <!-------------- Treppe Artikel 5 ENDE --------->
+
+
+      <!-------------- Treppe Artikel 8 ANFANG------------>
+      
+    
+
+      <a-plane id="a8_stufe2" 
+            geometry="width: 8; height: 4" 
+            position="86.05627 3.90772 23.96017" 
+            src="#a8.13" 
+            rotation="0 -40 0">
+      </a-plane>
+
+     
+
+      <!-- Artikel 8 Linien-Plane -->
+
+      <a-box id="a8_s1_line1" rotation="0 140 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="86.05034 5.9 23.93144" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s1_line2" rotation="0 50 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="80.92484 5.9 30.04001" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s1_line3" rotation="0 50 0" geometry="depth: 0.03;; width: 4; height: 0.03;" position="81.7126 5.9 22.89351" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s1_line4" rotation="0 140 0" geometry="depth: 0.03;; width: 4; height: 0.03;" position="79.88466 5.9 34.39121" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s1_line5" rotation="0 50 0" geometry="depth: 0.03;; width: 12; height: 0.03;" position="85.2772 5.9 31.0979" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s1_line6" rotation="0 140 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="83.50179 5.9 26.99364" color="#000000"> </a-box></a-box>
+      
+
+      <a-box id="a8_s2_line1" rotation="0 140 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="102.96396 -6.1 22.44249" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line2" rotation="0 50 90" geometry="depth: 0.03;; width: 4; height: 0.03;" position="99.98625 -8.1 19.90795" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line3" rotation="0 140 90" geometry="depth: 0.03;; width: 4; height: 0.03;" position="100.92099 -8.1 31.13563" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line4" rotation="0 140 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="103.0253 -10.1 22.46393" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line5" rotation="0 50 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="103.47245 -6.1 28.07217" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line6" rotation="0 50 90" geometry="depth: 0.03;; width: 4; height: 0.03;" position="106.05549 -8.1 25" color="#000000"> </a-box></a-box>
+      <a-box id="a8_s2_line7" rotation="0 50 0" geometry="depth: 0.03;; width: 8; height: 0.03;" position="103.48959 -10.1 28.04697" color="#000000"> </a-box></a-box>
+
+      <!-- Treppe Artikel 8 Linien Haus ANFANG-->
+
+      <a-box id="a8_g1_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 18; height: 0.03;" position="80 -1.1 37.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 18; height: 0.03;" position="80 -1.1 17.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 18; height: 0.03;" position="110 -1.1 37.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 18; height: 0.03;" position="110 -1.1 17.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line5" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="110 -10.1 27.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="110.05772 8 27.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line7" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="80 8 27.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="80 -10.1 27.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="95 -10.1 37.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="95 -10.1 17.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line11" rotation="0 0 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="95 8 17.5" color="#000000"> </a-box></a-box>
+      <a-box id="a8_g1_line12" rotation="0 0 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="95 8 37.5" color="#000000"> </a-box></a-box>
+
+      <!--TEXT Artikel 8 ANFANG-->
+
+
+      <a-entity id="artikel8.4" 
+      rotation="0 -130 0" 
+      scale="9 10 9" 
+      position="81.95801 3.77014 34.73872"
+      text="value: (4) Folglich koennen zu den Bereichen der Kooperation und Vermittlung mit dem Ziel der Staerkung des Verstaendnisses, der Massnahmen und der Unterstuetzung folgende gehoeren:;
+      color:#000000; wrapCount: 46; lineHeight: 48; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+<!-- 
+      <a-entity id="artikel8.4a" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="82.5666 -2.87647 67.0788"
+      text="value: a)	Fruehwarnsysteme;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4b" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="78.95082 -2.87647 61.41966"
+      text="value: b)	Notfallvorsorge; 
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4c" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="82.35728 -2.87647 61.49012"
+      text="value: c)	sich langsam anbahnende Ereignisse;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4d" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="82.19305 -2.87647 64.02658"
+      text="value: d)	moeglicherweise zu unumkehrbaren und dauerhaften Verlusten und Schaeden fuehrende Ereignisse;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4e" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="81.69047 -2.87647 63.71432"
+      text="value: e)	umfassende Risikobewertung und umfassendes Risikomanagement;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4f" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="81.99004 -2.87647 62.00907"
+      text="value: f)	Risikoversicherungsfazilitaeten, Buendelung von Klimarisiken und andere Versicherungsloesungen;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4g" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="81.88874 -2.87647 57.80857"
+      text="value: g)	nichtwirtschaftliche Verluste;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <a-entity id="artikel8.4h" 
+      rotation="0 0 0" 
+      scale="10 10 10" 
+      position="82.27136 -2.87647 63.72008"
+      text="value: h)	Widerstandsfaehigkeit von Gemeinschaften, Existenzgrundlagen und Oekosystemen.;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+-->
+
+      <a-entity id="artikel8.5" 
+      rotation="0 140 0" 
+      scale="10 10 10" 
+      position="86.88933 -0.1 18.8495"
+      text="value: (5) Der Internationale Mechanismus von Warschau arbeitet mit den aufgrund des Uebereinkommens bestehenden Gremien und Sachverstaendigengruppen sowie mit einschlaegigen Organisationen und Sachverstaendigengremien ausserhalb des Uebereinkommens zusammen.;
+      color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+      <!--TEXT Artikel 8 ENDE-->
+
+      <!----------------- Treppe Artikel 8 ENDE ----------->
+     
+      
+      <!----------------- Treppe Artikel 10 ANFANG ------------->
+
+
+      <a-plane id="a10_stufe1" 
+            geometry="width: 5; height: 5" 
+            position="-70.5 -5 66.5" 
+            src="#a10.5" 
+            rotation="-90 -90 180">
+      </a-plane>
+
+
+            <!-- Artikel 10 Line Cube ANFANG-->
+
+            <!-- <a-box id="a10_line1_q2" rotation="0 0 90" geometry="depth: 20;; width: 20; height: 20;; skipCache: false; primitive: box" position="-60 0 60" material="none" transparent="true" > </a-box></a-box> -->
+
+            <a-box id="a10_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-73 7.5 56.5" color="#000000"> </a-box></a-box>
+           <!-- <a-box id="a10_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-73 7.5 61.5" color="#000000"> </a-box></a-box> -->
+            <a-box id="a10_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-78 7.5 61.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-78 7.5 56.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line5" rotation="0 0 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-75.5 5 61.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-78 5 59" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line7" rotation="0 0 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-75.5 5 56.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-73 5 59" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-75.5 10 61.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-75.5 10 56.5" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line11" rotation="0 90 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-73 10 59" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line12" rotation="0 90 0" geometry="depth: 0.03;; width: 5; height: 0.03;" position="-78 10 59" color="#000000"> </a-box></a-box>
+
+      
+            <a-box id="a10_line1_q2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-60 -0 60" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line2_q2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-60 0 80" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line3_q2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 0 80" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line4_q2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 0 60" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line5_q2" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 -10 80" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line6_q2" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 -10 70" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line7_q2" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 -10 60" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line8_q2" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-60 -10 70" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line9_q2" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 10 80" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line10_q2" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 10 60" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line11_q2" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-60 10 70" color="#000000"> </a-box></a-box>
+            <a-box id="a10_line12_q2" rotation="0 90 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 10 70" color="#000000"> </a-box></a-box>
+
+            <!-- Artikel 10 Line Cube ENDE-->
+
+            <!-- TEXT Artikel 10 ANFANG -->
+
+            <a-entity id="artikel10.1" 
+                  rotation="0 0 0" 
+                  scale="10 10 10" 
+                  position="-63.87979 -2.87647 64.39497"
+                  text="value: 
+                  (1) Die Vertragsparteien haben eine gemeinsame langfristige Vision von der Bedeutung einer uneingeschraenkten Verwirklichung der Entwicklung und Weitergabe von Technologie fuer die Verbesserung der Widerstandsfaehigkeit gegenueber Klimaaenderungen und die Verringerung der Emissionen von Treibhausgasen.;
+                  color:#000000; wrapCount: 50; lineHeight: 52; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+            </a-entity>
+
+            <a-entity id="artikel10.2" 
+                  rotation="0 90 0" 
+                  scale="10 10 10" 
+                  position="-75.22113 2.33501 55.58468"
+                  text="value: (2) In Kenntnis der Bedeutung von Technologien fuer die Durchfuehrung von Minderungs- und Anpassungsmassnahmen im Rahmen dieses Ueber- einkommens und in Anerkennung der bisherigen Bemuehungen um ihre Anwendung und Verbreitung verstaerken die Vertragsparteien die gemeinsamen Massnahmen im Bereich der Entwicklung und Weitergabe von Technologie.; 
+                  color:#000000; wrapCount: 50; lineHeight: 46; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+            </a-entity>
+
+          
+
+            <!-- TEXT Artikel 10 ENDE-->
+
+
+      <!----------------- Treppe Artikel 10 ENDE ------------->
+
+
+      <!-----------------  Treppe Artikel 13 ANFANG ------------>
+      <a-plane id="a13_stufe0.1" 
+            geometry="width: 6; height: 6" 
+            position="-79 -13 -34" 
+            src="#a13.0.1" 
+            rotation="0 180 0">
+      </a-plane>
+
+      <a-plane id="a13_stufe0.2" 
+            geometry="width: 6; height: 6" 
+            position="-76 -13 -37" 
+            src="#a13.0.2" 
+            rotation="0 -90 0">
+      </a-plane>
+
+      <a-plane id="a13_stufe1" 
+            geometry="width: 12; height: 6" 
+            position="-79 -10 -40" 
+            src="#a13.1" 
+            rotation="90 90 0">
+      </a-plane>
+
+     
+
+      <a-plane id="a13_stufe8b" 
+            geometry="width: 6; height: 6" 
+            position="-79 14 -61" 
+            src="#a13.8b" 
+            rotation="-90 90 0">
+      </a-plane>
+      
+
+
+      <!-- Artikel 13 Linien Haus -->
+
+            <a-box id="a13_line1" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 0 -60" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-70 0 -30" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line3" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-90 0 -30" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-90 0 -60" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line5" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 -10 -30" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line6" rotation="0 90 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-90 -10 -45" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line7" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 -10 -60" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line8" rotation="0 90 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-70 -10 -45" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 8 -30" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line10" rotation="0 0 0" geometry="depth: 0.03;; width: 20; height: 0.03;" position="-80 8 -60" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line11" rotation="0 90 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-70 10 -45" color="#000000"> </a-box></a-box>
+            <a-box id="a13_line12" rotation="0 90 0" geometry="depth: 0.03;; width: 30; height: 0.03;" position="-90 10 -45" color="#000000"> </a-box></a-box>
+
+            <a-box id="a13_q_line1" rotation="0 0 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-85 -10 -40" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line2" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-88 -7 -40" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line3" rotation="0 0 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-85 -4 -40" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line4" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82 -7 -40" color="#000000"> </a-box></a-box>
+
+            <a-box id="a13_q_line5" rotation="0 90 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82.00008 7.97 -55.00448" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line6" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82 4.97 -52" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line7" rotation="0 90 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82.02798 1.97 -55" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line8" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82 4.97 -58.01201" color="#000000"> </a-box></a-box>
+
+            <a-box id="a13_q_line9" rotation="0 0 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-79.01408 8.003 -64.0185" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line10" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-76.01522 11 -64.00649" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line11" rotation="0 0 0" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-79.02389 14 -64" color="#000000"> </a-box></a-box>
+            <a-box id="a13_q_line12" rotation="0 0 90" geometry="depth: 0.03;; width: 6; height: 0.03;" position="-82 11.00603 -64" color="#000000"> </a-box></a-box>
+
+
+            <!--TEXT Artikel 13 ANFANG-->
+
+           
+            <a-entity id="artikel13.3" 
+                        rotation="0 -128.02054382844088 0" 
+                        scale="15 15 15" 
+                        position="-77.43487 -6.98091 -52.46091"
+                        text="value: (3) Der Transparenzrahmen stuetzt sich auf die Transpa- renzregelungen aufgrund des Rahmenuebereinkommens und verstaerkt sie, wobei die besonderen Gegebenheiten der am wenigsten entwickelten Laender und der kleinen Inselstaaten unter den Entwicklungslaendern berueck- sichtigt werden, er wird in einer vermittelnden, zurueckhaltenden und nicht auf Strafen ausgerichteten Weise unter Achtung der nationalen Souveraenitaet angewendet und vermeidet es, die Vertragsparteien unangemessenen zu belasten.; 
+                        color:#000000; wrapCount: 56; lineHeight: 46; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+            </a-entity>
+
+            <a-entity id="artikel13.4" 
+                        rotation="0 -180 0" 
+                        scale="12 12 12" 
+                        position="-93.40175 -7.71355 -46.2134"
+                        text="value: (4) Die Transparenzregelungen aufgrund des Rahmenuebereinkommens einschließlich der nationalen Mitteilungen, der Zweijahresberichte und der aktualisierten Zweijahresberichte, der internationalen Bewertung und Ueberpruefung und der internationalen Konsultation und Analyse sind Bestandteil der Erfahrungen, auf die bei der Erarbeitung der Modalitaeten, Verfahren und Leitlinien nach Absatz 13 zurueckgegriffen wird.; 
+                        color:#000000; wrapCount: 66; lineHeight: 56; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+            </a-entity>
+
+          
+
+            <!--TEXT Artikel 13 ENDE-->
+
+      <!-------------------  Treppe Artikel 13 ENDE ------------------>
+
+
+
+
+
+      <!-- BODEN Linien ANFANG -->
+
+                  <a-box id="line_a1" rotation="0 90 0" geometry="depth: 0.03;; width: 100; height: 0.03;" position="-2.5263 -10.1 67.68523" color="#000000"> </a-box></a-box>
+                  <a-box id="line_a2" rotation="0 90 0" geometry="depth: 0.03;; width: 100; height: 0.03;" position="1.99038 -10.1 67.15935" color="#000000"> </a-box></a-box>
+                  <a-box id="line1" rotation="0 15 0" geometry="depth: 0.03;; width: 145; height: 0.03;" position="10.003 -10.1 51.03153" color="#000000"> </a-box></a-box>
+                  <a-box id="line2" rotation="0 15 0" geometry="depth: 0.03;; width: 145; height: 0.03;" position="10 -10.1 46.07086" color="#000000"> </a-box></a-box>
+                  <a-box id="line3" rotation="0 40 0" geometry="depth: 0.03;; width: 70; height: 0.03;" position="-33.17909 -10.1 38.47183" color="#000000"> </a-box></a-box>
+                  <a-box id="line4" rotation="0 40 0" geometry="depth: 0.03;; width: 74.5; height: 0.03;" position="-38.67279 -10.1 36.11484" color="#000000"> </a-box></a-box>
+                  <a-box id="line5" rotation="0 65 0" geometry="depth: 0.03;; width: 182; height: 0.03;" position="-31.98828 -10 -22.44298" color="#000000"> </a-box></a-box>
+                  <a-box id="line6" rotation="0 65 0" geometry="depth: 0.03;; width: 182; height: 0.03;" position="-25.55429 -10 -22.44512" color="#000000"> </a-box></a-box>
+                  <a-box id="line7" rotation="0 95 0" geometry="depth: 0.03;; width: 90.34; height: 0.03;" position="-80.69201 -10 14.93995" color="#000000"> </a-box></a-box>
+                  <a-box id="line8" rotation="0 95 0" geometry="depth: 0.03;; width: 90.23; height: 0.03;" position="-74.36846 -10 15.04871" color="#000000"> </a-box></a-box>
+                  <a-box id="line9" rotation="0 170 0" geometry="depth: 0.03;; width: 90; height: 0.03;" position="35.66077 -10.1 19.48463" color="#000000"> </a-box>
+                  <a-box id="line10" rotation="0 170 0" geometry="depth: 0.03;; width: 73.94; height: 0.03;" position="43.59969 -10.1 15.556" color="#000000"> </a-box>
+                  <a-box id="line11" rotation="0 158 0" geometry="depth: 0.03;; width: 166.19; height: 0.03;" position="7.01985 -10.1 -13.57445" color="#000000"> </a-box>
+                  <a-box id="line12" rotation="0 158 0" geometry="depth: 0.03;; width: 161.22; height: 0.03;" position="4.57071 -10.1 -8.355" color="#000000"> </a-box>
+                  <a-box id="line13" rotation="0 -60 0" geometry="depth: 0.03;; width: 141.49; height: 0.03;" position="58.329 -10 -43.824" color="#000000"> </a-box></a-box>
+                  <a-box id="line14" rotation="0 -60 0" geometry="depth: 0.03;; width: 141.38; height: 0.03;" position="51.309 -10.1 -43.73271" color="#000000"> </a-box></a-box>
+                  <a-box id="line15" rotation="0 80 0" geometry="depth: 0.03;; width: 116; height: 0.03;" position="9.15412 -10.1 -47.86465" color="#000000"> </a-box></a-box>
+                  <a-box id="line16" rotation="0 80 0" geometry="depth: 0.03;; width: 116; height: 0.03;" position="2.83524 -10.1 -47.98577" color="#000000"> </a-box></a-box>
+                  <a-box id="line17" rotation="0 36 0" geometry="depth: 0.03;; width: 102.37; height: 0.03;" position="-28.48395 -10.1 -74.93328" color="#000000"> </a-box></a-box>
+                  <a-box id="line18" rotation="0 36 0" geometry="depth: 0.03;; width: 90.35; height: 0.03;" position="-33.51379 -10.1 -78.40671" color="#000000"> </a-box></a-box>
+                  <a-box id="line19" rotation="0 -29.999999999999996 0" geometry="depth: 0.03;; width: 87.01; height: 0.03;" position="-32.19221 -10.1 -12.86334" color="#000000"> </a-box></a-box>
+                  <a-box id="line20" rotation="0 -29.999999999999996 0" geometry="depth: 0.03;; width: 77.74; height: 0.03;" position="-40.524 -10.1 -10.555" color="#000000"> </a-box></a-box>
+                  
+
+      <!-- BODEN Linien ENDE -->
+
+
+      <!--TEXT-->
+
+ <!-- 
+      <a-entity id="anfangtext" 
+            rotation="0 0 0" 
+            scale="60 60 60" 
+            position="13.91633 -0.24065 86.30382"
+            text="value:Pariser Klimaabkommen; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+      </a-entity>
+
+-->
+      <!-- TEXT Leittexte ANFANG-->
+        
+<!-- 
+                  <a-entity id="leit_artikel2" 
+                        rotation="-90 90 0" 
+                        scale="20 20 20" 
+                        position="-1.23638 -10 48.32442"
+                        text="value: Artikel 2; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+-->
+                  <!-- Leittext von Artikel 2 -->
+
+                  <a-entity id="2leit_artikel5" 
+                        rotation="-90 80 0" 
+                        scale="20 20 20" 
+                        position="4.63462 -10 -28.74684"
+                        text="value: Artikel 2/ Artikel 5; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+<!-- 
+                  <a-entity id="2leit_artikel8" 
+                        rotation="-90 -10 0" 
+                        scale="20 20 20" 
+                        position="37.11387 -10 16.07324"
+                        text="value: Artikel 2/ Artikel 8; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+-->
+                  <a-entity id="2leit_artikel10" 
+                        rotation="-90 40 0" 
+                        scale="20 20 20" 
+                        position="-21.6649 -10 23.89659"
+                        text="value: Artikel 10/ Artikel 2; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+<!-- 
+                  <a-entity id="2leit_artikel13" 
+                        rotation="-90 -30 0" 
+                        scale="20 20 20" 
+                        position="-21.54368 -10 -4.59303"
+                        text="value: Artikel 13/ Artikel 2; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+-->
+                  
+                  <!-- Leittext von Artikel 5 -->
+
+             
+
+                  <a-entity id="5leit_artikel8" 
+                        rotation="-90.00021045914971 120 0" 
+                        scale="20 20 20" 
+                        position="32.98782 -9.99999 -86.44281"
+                        text="value: Artikel 8/ Artikel 5; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+                
+                  <!-- Leittext von Artikel 8 -->
+
+              
+                  <a-entity id="8leit_artikel10" 
+                        rotation="-90 15 0" 
+                        scale="20 20 20" 
+                        position="63.13447 -10 33.37646"
+                        text="value: Artikel 10/ Artikel 8; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+
+                
+                  <!-- Leittext von Artikel 10 -->
+
+            
+                  <a-entity id="10leit_artikel13" 
+                        rotation="-90 95 0" 
+                        scale="20 20 20" 
+                        position="-77.73071 -10 32.48579"
+                        text="value: Artikel 10/ Artikel 13 ; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+
+                  <!-- Leittext von Artikel 13 -->
+
+
+                  <a-entity id="13leit_artikel10" 
+                        rotation="-90 -85 0" 
+                        scale="20 20 20" 
+                        position="-78.0563 -10.1 -10.22044"
+                        text="value: Artikel 13/ Artikel 10 ; color:#000000; wrapCount: 55; lineHeight: 70; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cousine/Cousine-Regular.json"> 
+                  </a-entity>
+
+       <!-- TEXT Leittexte ANFANG-->
+
+      
+
+    
+
+      <!--TEXT ENDE-->
+  
+
+      
+    </a-scene>
+  </body>
+</html>

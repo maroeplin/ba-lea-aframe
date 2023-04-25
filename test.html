@@ -1,0 +1,158 @@
+<html>
+
+  <head>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
+    
+  </head>
+  <body>
+    <!-- 
+      <a-scene fog="type: linear; color: #CCD; far: 180; near: 0"> 
+      -->
+      <meta name="apple-mobile-web-app-capable" content="yes"> 
+
+      <a-scene> 
+
+      <!-- ASSET MANAGER TEST -->
+      <a-assets crossorigin="anonymous">
+        
+     <!--  Spielt autoplay im Hintergrund -->
+
+    <!--  <audio id="bla"  src="assets/Anxiety - NEFFEX.mp3" ></audio> -->
+
+       <!-- <audio id="bla" src="assets/Anxiety - NEFFEX.mp3" autoplay loop="false"   preload="auto"  webkit-playsinline="playsinline"></audio> -->
+       
+      <!-- <video muted id="video25" autoplay  loop="true" src="assets/Maßnahmen.mp4"></video> 
+    loop true video wiederholen, false einmal
+      -->
+
+      <video muted id="pexels" autoplay loop="true" src="assets/pexels.mp4"></video> 
+      <video muted id="videon" autoplay loop="false" src="assets/timeblindness.MP4"></video> 
+  
+    
+
+      </a-assets>
+
+      <!-- ASSET MANAGER ENDE-->
+    
+
+     
+
+      <!--KAMERASTARTPUNKT    position="-1.9732 1.6 180" -->
+      
+      <a-entity id="startpunkt" 
+      position="0 1.6 30" 
+      rotation="0 0 0">
+      <a-camera ></a-camera>
+      </a-entity>
+
+      <!--KAMERASTARTPUNKT ENDE-->
+
+    
+       <!-- 360GRAD BG    shadow="receive: true; cast: true" -->
+<!-- 
+       <a-sky 
+       scale="1 1 1" 
+     
+       color="#e3dac9"
+       position="0 0 0"
+       >
+     </a-sky>
+-->
+
+
+
+   <!-- a-video   webkit-playsinline="playsinline"Precision -->
+   
+   <!--  <a-video src="videon" 
+    width="9" 
+    height="16" 
+    position="0 0 10"> 
+    </a-video>
+-->
+    <a-plane id="Klima26" rotation="0 -300 0"  position="-10.47852 7.49627 -5.2072"  width="9" height="16" src="#pexels"shadow="receive:true; cast:true"></a-plane>
+
+    <a-plane id="Klima27" rotation="0 0 0"  position="10.47852 7.49627 -5.2072"  width="9" height="16" src="#videon"shadow="receive:true; cast:true"></a-plane>
+
+
+<!-- 
+    <a-plane id="testplane" 
+        geometry="width: 9; height: 16" 
+        position="0 0 11"
+        color="#d6d6d6"
+        rotation= "0 0 0">
+    </a-plane>  
+
+
+    -->
+       <!--360GRAD BG ENDE-->
+
+
+      <!-------- Clock 3 Objekt  sound="src: #river" 
+
+      <a-entity id="elmo" geometry="primitive: box" scale="10 10 10" position="40 3 10" src="assets/Anxiety - NEFFEX.mp3; on: click refDistance:1; positional:true "></a-entity> ----->
+
+     <a-entity id="elmo" geometry="primitive: box" scale="10 10 10" position="40 3 10" sound="src:assets/Anxiety - NEFFEX.mp3; autoplay:false ; on: click" ></a-entity> 
+     
+     
+      <!-- 
+<a-cylinder id="rund" height="5" position="40 3 10" color="6d6d6d" 
+      sound= "src: #bla; 
+              on: click;
+              volume: 10;
+              refDistance: 4;
+              rolloffFactor: 4">  
+  
+  <a-entity sound="src: #bla; autoplay: true" position="41.5 0.5 10.5">  </a-entity>
+-->
+
+ 
+
+      <!-- Script JS Datei anlegen
+      <script>  
+      var entity = document.querySelector('[sound]');
+      entity.components.sound.stopSound();
+
+      entity.components.sound.pauseSound();
+
+      entity.components.sound.playSound();
+</script>
+--->
+
+    <!-- 
+     <a-box id="bla"
+     scale="20 20 20"
+     rotation="0 0 0"
+     position="10 3 10"
+     src="bla">
+
+     </a-box>
+           --> 
+  
+     <!-- 
+    
+     <a-box id="bla"
+     scale="20 20 20"
+     rotation="0 0 0"
+     position="10 3 10"
+     sound="src: #bla">
+
+     </a-box>
+-->
+<!-- 
+<a-sound src="bla"> </a-sound>
+-->
+           <!-- 
+         <a/scene>
+
+         <script>
+            const videoEl = document.querySelector('#testvideo'); videoEl.pause() ;videoEl.currentTime = 0.1
+         </script>
+
+         -->
+  </body>
+</html>
